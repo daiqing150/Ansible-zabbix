@@ -1,0 +1,7 @@
+---
+    - name: Install zabbix-agent
+      yum: name=zabbix-agent state=latest
+    - name: Copy /etc/zabbix/zabbix_agented.conf
+      template: src=zabbix_agentd.conf dest=/etc/zabbix/zabbix_agentd.conf owner=root group=root mode=644
+    - name: Start zabbix_agent
+      service: name=zabbix-agent state=started enabled=yes

@@ -1,0 +1,4 @@
+---
+zabbix_server: 192.168.77.203
+zabbix_proxy: 192.168.77.204
+ansible_ssh_user: root
